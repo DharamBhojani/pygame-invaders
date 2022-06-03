@@ -1,23 +1,41 @@
-**pygame-invaders******
+# Pygame Invaders
 
-Here we have made a game using python libraries like Pygame or Pymunk.
+Here we have made a game using python libraries like **Pygame**.
 
+It is a *Block Clearing game* where the user have to **_break_** the blocks.
 
-
-You need to install Python 3.10.4 from here
-You need to install Pygame
+1. You need to install Python 3.10.4 from [here](https://www.python.org/downloads/)
+2. You need to install Pygame
+``` 
 pip install pygame
-OR you can use this Link
-And the total Requirements is full filled.
+```
+2. OR you can use this [Link](https://pypi.org/project/pygame/)
+3. And the total Requirements is full filled.
 
+### Important Instructions :
 
-Important Instructions :
+* The User will get one chance by default.
+* The blocks comes in a form like a matrix.
+* With the help of **Space Bar** the user shoot the bullets to the block bars.
+* With the help of Directional keys the User can control the flow of their own Battle Ship.
 
+Reference Code : 
+```python
 
-The Enemy battle ships gets incremented as the game goes on.
-With the help of Space Bar the user shoot the bullets to the Enemy alieans Ships.
-With the help of Directional keys the User can control the flow of their own space ship
+def __init__(self, width, height):
+    pygame.init()
+    self.width = width
+    self.height = height
+    self.screen = pygame.display.set_mode((width, height))
+    self.clock = pygame.time.Clock()
+    done = False
+    hero = Hero(self, width / 2, height - 20)
+    generator = Generator(self)
+    rocket = None
+```
+Reference Images : <br>
+	<br>![alt text](assets/images/gameplay.gif)
+	
+This is the README file for Pygame Invaders repository. [^1]
 
-
-
-![Screenshot (37)](https://user-images.githubusercontent.com/106610267/171209501-a94020c5-0c3a-49c6-aa55-312798ec6ff5.png)
+[^1]: By : Dharam Bhojani.
